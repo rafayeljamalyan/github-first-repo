@@ -1,16 +1,16 @@
 import './css/App.css';
-import Counter from './components/Counter';
+import React, { Component } from 'react'
+import Users from './components/Users';
 
-function App() {
-  function avelacnelucHeto( tiv ) {
-    console.log( `he he avelacrinq`, tiv );
-  }
+export default class App extends Component {
+   
 
-  return (
+  render() {
+    return (
     <div className="App">
-      <Counter onAvelacnel={avelacnelucHeto} />
+      <Users />
     </div>
-  );
+    )
+  }
 }
 
-export default App;
