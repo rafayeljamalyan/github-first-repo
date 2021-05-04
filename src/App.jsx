@@ -1,13 +1,14 @@
 import './css/App.css';
-import Test2 from "./components/Test2";
+import Counter from './components/Counter';
 
 function App() {
+  function avelacnelucHeto( tiv ) {
+    console.log( `he he avelacrinq`, tiv );
+  }
 
   return (
     <div className="App">
-      <Test2 name="Rafayel" age="21" />
-      <p>aaaa</p>
-      <Test2 name="Ero" age="20" />
+      <Counter onAvelacnel={avelacnelucHeto} />
     </div>
   );
 }
