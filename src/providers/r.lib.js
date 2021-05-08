@@ -3,22 +3,13 @@
  *  21:41
  */
 
-export const request = ( url, method, data = null ) => new Promise( ( rslv, rjct ) => {
-    const http = new XMLHttpRequest();
-    http.open( method, url );
-    
-    http.onreadystatechange = function() {
-        if( this.readyState === 4 ) {            
-          if (http.status  < 400) {
-            rslv( JSON.parse( this.responseText ) );            
-          } else {
-              rjct( this.statusText )
-          }
-        }
-    }   
-
-    if ( data )
-        http.send( data );
-    else
-        http.send();
+export const request = ( url, method, data = null ) => new Promise( async ( rslv, rjct ) => {
+    try {
+        const rsp = await fetch( url, { method, data });
+        const rslt = await rsp.json();
+        rslv( rslt );
+    }
+    catch( err ) {
+        rjct( err );
+    }
 });
