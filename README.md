@@ -1,3 +1,3 @@
-# This is my first github project
+# Yo man
 
 My username is __rafayeljamalyan__  
