@@ -1,3 +1,8 @@
-# Yo man
+# My first react project
 
-My username is __rafayeljamalyan__  
+Oh that is awesome.
+I love github. 
+
+- Home page
+- About page
+- Contact page
